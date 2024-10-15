@@ -1,4 +1,11 @@
+section header {
+    border-top: 1px solid var(--stroke-color);
+    padding-block: 12px 24px;
+    font: var(--text-span)
+}
+
 #featured {
+    grid-area: featured;
     img {
         height: 100%;
         object-fit: cover;
@@ -45,7 +52,19 @@
 }
 
 #weekly {
-    padding-block: 12px 24px;
+    grid-area: weekly;
+    header a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            background-image: url(../assets/icons/ArrowRight.svg);
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+        }
+    }
 
     &>div {
         grid-template-columns: repeat(4, 292px);
@@ -53,5 +72,93 @@
 
     img {
         height: 160px;
+    }
+
+    figure {
+        position:relative;
+
+        .content-tag {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        p {
+            margin-top: 8px;
+        }
+    }
+}
+
+#ai {
+    header a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            background-image: url(../assets/icons/ArrowRight.svg);
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    h3 {
+        color: var(--text-color-primary);
+        margin-block: 8px 4px;
+    }
+
+    p {
+        font-weight: 800;
+        color: var(--text-color-secondary);
+    }
+
+    .content-tag {
+        margin-block: 8px;
+    }
+
+    img {
+        width: 176px;
+        height: 176px;
+    }
+}
+
+#more {
+    header a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            background-image: url(../assets/icons/ArrowRight.svg);
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+
+}
+
+aside {
+
+    grid-area: aside;
+}
+
+#more {
+    margin-top: 32px;
+    
+    img {
+        margin-top: 24px;
+        width: 72px;
+       height: 72px;
+    }
+
+    article h3 {
+        margin-top: 2px;
+    }
+
+    article .content-tag {
+        margin-top: 24px;
     }
 }
